@@ -19,7 +19,41 @@ These two subsystems are separated by the transition region, the magnetization o
 
 The electron current density flowing through the polarizer along z axis gains the spin-polarization which is aligned parallel to the magnetization of the appropriate magnetic layer, so the polarization is changed periodically along x axis due to periodicity of the structure. The appropriate influence of the current to the magnetic structure is neglected due to the magnetization fixing which was mentioned earlier. Thus, we obtain spin-polarized current which flows into the analyzer through the interface.
 
-Flowing through the analyzer the electro
+Further, we will consider the influence of this current on the magnetic states of the analyzer.
+
+Flowing through the bulk of the analyzer the moving electrons scatter on the magnetic sublattice. This can be effectively described as a torque acting on the analyzers magnetization.
+
+For the sake of the simple analytical describing of the analyzer let's divide it into two sublattices. Each sublattice contains all magnetic layers with the same direction of the magnetization. Here we assume that only two opposite directions is allowed in equilibrium state.
+
+So, we can consider each sublattice as a simple ferromagnetic system, and apply standard approach to depict the influence of spin-polarized current on it.
+\be
+	\label{ eq:LLGS }
+	\dot{\mb{M}}_k =
+			- \gamma \left[ \mb{M}_k \times \mb{H}_k \right]
+			+ \frac{\alpha_G}{M_0}
+				\left[
+					\mb{M}_k \times \dot{\mb{M}}_k
+				\right]
+			+ \frac{\sigma I}{M_0}
+				\left[
+					\mb{M}_k \times \left[ \mb{M}_k \times \uv{p}_k \right]
+				\right].
+\ee
+Here $k$ denotes sublattice. In our case $k = 1, 2$. $\mb{M}_k$ is a vector of magnetization which is defined as a magnetic moment of the unit volume of the appropriate sublattice. $\mb{H}_k = -\partial W / \partial \mb{M}_k$ is an effective magnetic field acting on $k$-th sublattice, $W$ is a density of the free energy of the analyzer. It is important to mention that it contains the term which describe the interaction between sublattices.
+
+As a first touch, we consider isotropic ferromagnetic material. Therefor, the density of the free energy can be considered as following:
+\be
+	\label{ eq:free_enegy }
+	W = J_\text{int} \bra{ \mb{M}_1 \cdot \mb{M}_2 }
+		- \frac{1}{2} K \bra{ M_{1z}^2 + M_{2z}^2 }.
+\ee
+This quantity achieves it minimum value when the magnetizations of the sublattices directs oppositely to each other and along the $z$ axis. The former statement says that we deal with antiferromagnetic interaction between sublattices, and the latter statement defines preferred direction in the structure of the ferromagnetic material.
+
+
+
+
+
+
 
 
 

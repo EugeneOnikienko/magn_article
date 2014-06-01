@@ -3,4 +3,5 @@
 *.log
 *.gz
 *.pdf
+raw_figures/*
 !src.pdf
