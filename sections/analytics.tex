@@ -1,4 +1,37 @@
 \newpage
 
 \section{Analytics}
+\label{sec:Analytics}
+
+\subsection{Linear approximation}
+According to the model which was described in the section \ref{sec:Model} the equilibrium states of the magnetization vector in each sublattice directed along $z$ axis:
+$$
+	\mb{M}^0_k = \bra{0, 0, (-1)^{k+1}M_0}
+$$
+where $M_0$ -- saturation value of the magnetization.
+
+Let's assume that the magnetization vector is slightly deviated from the equilibrium states by the value which is much smaller then $M_0$. This excited vector can be written as a sum of two perpendicular vectors:
+$$
+	\mb{M}_k = \mb{m}_k + \mb{M}_{kz},
+$$
+where $\mb{m}_k$ is a small vector which lies on $xy$ plane.
+
+The equations of motion (\ref{eq:LLGS}) leave the magnitude of the magnetization vector constant, so $\abs{\mb{M}_k} = M_0$. In this case, the magnitude of the $\mb{M}_{kz}$ can be approximated as following:
+\bea
+	\mb{M}_{kz}			&=& \mb{M}_k - \mb{m}_k; 						\nn \\
+	M_{kz}^2 			&=& M_k^2 - 2\mb{M}_k \cdot \mb{m}_k + m_k^2 	\nn \\
+						&=& M_k^2 - m_k^2 = M_0^2 - m_k^2; 				\nn \\
+	\abs{\mb{M}_{kz}} 	&=& \sqrt{M_0^2 - m_k^2} = M_0 \sqrt{1-\frac{m_k^2}{M_0^2}} \nn
+\eea
+
+The expending of the last expression in the Taylor series gives	$M_{kz} \approx M_0 \bra{1-\frac{1}{2}\frac{m_i^2}{M_0^2}}$. Hence, in linear approximation the magnetization vector can be considered as following:
+\be
+\label{eq:magn}
+	\mb{M}_k = \bra{m_{kx}, m_{kx}, (-1)^{k+1}M_0}
+\ee
+
+In our case the current flowing through the bulk is a source of the external amount of energy which manifesting in the deviations of the magnetization vector from it equilibrium state. The internal damping dissipate this energy.
+
+
+
 
