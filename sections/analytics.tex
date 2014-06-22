@@ -30,7 +30,39 @@ The expending of the last expression in the Taylor series gives	$M_{kz} \approx 
 	\mb{M}_k = \bra{m_{kx}, m_{kx}, (-1)^{k+1}M_0}
 \ee
 
-In our case the current flowing through the bulk is a source of the external amount of energy which manifesting in the deviations of the magnetization vector from it equilibrium state. The internal damping dissipate this energy.
+In our case the current flowing through the bulk is a source of the external amount of energy which manifesting in the deviations of the magnetization vector from it equilibrium state. The internal damping dissipate this energy. So, there is a value of the current when this two processes compensate each other. This value is called critical current. Let's find it analytical expression.
+
+By substituting the expression for magnetization vector (\ref{eq:magn}) into the equations of motion (\ref{eq:LLGS}) and neglecting the terms of the \emph{second order of smallness} (Here we assume that the small quantity is one of the vectors $\mb{m}_k$ or it component) we obtain a system of equations for deviation terms:
+\bea
+	\label{eq:analytical_study:momentum_motion}
+	\dot{m}_{1x} &=&	- \sigma I							m_{1x}
+						- \gamma M_0 ( J_\text{int} + K )	m_{1y}
+						- \gamma M_0 J_\text{int}			m_{2y}
+						- \alpha_G							\dot{m}_{1y}	\nn \\
+	\dot{m}_{1y} &=&	  \gamma M_0 ( J_\text{int} + K )	m_{1x}
+						- \sigma I							m_{1y}
+						+ \gamma M_0 J_\text{int}			m_{2x}
+						+ \alpha_G							\dot{m}_{1x}	\nn \\
+	\dot{m}_{2x} &=&	  \gamma M_0 J_\text{int}			m_{1y}
+						- \sigma I							m_{2x}
+						+ \gamma M_0 ( J_\text{int} + K )	m_{2y}
+						+ \alpha_G							\dot{m}_{2y}	\nn \\
+	\dot{m}_{2y} &=&	- \gamma M_0 J_\text{int}			m_{1x}
+						- \gamma M_0 ( J_\text{int} + K )	m_{2x}
+						- \sigma I							m_{2y}
+						- \alpha_G							\dot{m}_{2x}
+\eea
+
+The solutions of this system of equations we will seek in the exponent form $m_i \sim e^{i\omega t}$. In this case the eigenvalues of the frequency is following:
+\bea
+	\label{eq:analytical_study:dissipative_frequency}
+	\omega &=&	i \frac{ \sigma I + \gamma M_0 (K + J_\text{int}) \alpha_G }{\alpha_G^2 + 1} \\
+				&\pm& \frac{\sqrt{ (\alpha_G \sigma I - \gamma M_0 (K + J_\text{int}))^2 - (\gamma M_0 J_\text{int})^2( \alpha_G^2 + 1 )} }{ \alpha_G^2 + 1 } \nn
+\eea
+
+
+
+
 
 
 
