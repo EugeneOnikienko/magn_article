@@ -34,7 +34,6 @@ In our case the current flowing through the bulk is a source of the external amo
 
 By substituting the expression for magnetization vector (\ref{eq:magn}) into the equations of motion (\ref{eq:LLGS}) and neglecting the terms of the \emph{second order of smallness} (Here we assume that the small quantity is one of the vectors $\mb{m}_k$ or it component) we obtain a system of equations for deviation terms:
 \bea
-	\label{eq:analytical_study:momentum_motion}
 	\dot{m}_{1x} &=&	- \sigma I							m_{1x}
 						- \gamma M_0 ( J_\text{int} + K )	m_{1y}
 						- \gamma M_0 J_\text{int}			m_{2y}
@@ -50,12 +49,12 @@ By substituting the expression for magnetization vector (\ref{eq:magn}) into the
 	\dot{m}_{2y} &=&	- \gamma M_0 J_\text{int}			m_{1x}
 						- \gamma M_0 ( J_\text{int} + K )	m_{2x}
 						- \sigma I							m_{2y}
-						- \alpha_G							\dot{m}_{2x}
+						- \alpha_G							\dot{m}_{2x}	\nn
 \eea
 
 The solutions of this system of equations we will seek in the exponent form $m_i \sim e^{i\omega t}$. In this case the eigenvalues of the frequency is following:
 \bea
-	\label{eq:analytical_study:dissipative_frequency}
+	\label{eq:analytic:eigenfrequency}
 	\omega &=&	i \frac{ \sigma I + \gamma M_0 (K + J_\text{int}) \alpha_G }{\alpha_G^2 + 1} \\
 				&\pm& \frac{\sqrt{ (\gamma M_0 (K + J_\text{int}) - \alpha_G \sigma I)^2 - (\gamma M_0 J_\text{int})^2( \alpha_G^2 + 1 )} }{ \alpha_G^2 + 1 } \nn
 \eea
@@ -63,6 +62,31 @@ The solutions of this system of equations we will seek in the exponent form $m_i
 This expression is complex value.
 The real part of it is responsible for the frequency of precession of magnetization vector around the preferred direction in the ferromagnetic layer. 
 The imaginary part is responsible for either increasing or decreasing of the amplitude of precession. It is determined by the ratio between amount of pumping and damping energy.
+
+Let's consider the situation when there is no friction in the system ($\alpha_G = 0$). In this case the eigenfrequencies of such system is determined by the expression:
+$$
+	\omega_\text{nofric} = i \sigma I \pm
+						   \gamma M_0 \sqrt{ K \bra{ K + 2J_\text{int} } }.
+$$
+The real part of this frequency increase with either increasing of antiferromagnetic interaction between the layers ( $J_\text{int}$ ) or increasing of \emph{preferred direction quality}.
+
+The imaginary part depends only on current intensity. Depending on the direction of the current flow it can play role of the effective damping or the effective pumping (it determined by the sign of $I$).
+
+In the general case the situation is more complicated. According to the expression $\ref{eq:analytic:eigenfrequency}$ nonzero friction leads to the dependency of the real part of frequency both on the coefficient of damping and the current intensity. The pure frictional terms tends to reduce the frequency, however the term which contains current intensity can either enhance or reduce the frequency depending on it sign.
+
+As for imaginary part, here situation is similar. The damping tends to turn the magnetization in the equilibrium position and minimize energy. The influence of current can be either dumping style (work in the same direction with damping, and as a result increasing effective damping in the system) or pumping style, when it work in opposite direction with damping, hence it work as a source of energy, so tends to increase deviations of magnetization from it equilibrium position.
+
+When the current is working in pumping style it is possible curious situation when the current compensates energy losses in the system from the friction. In this case, the intensity of the current is called critical current. This possible when the imaginary part in the (\ref{eq:analytic:eigenfrequency}) is nullified. Hence the critical current is determined by the following expression:
+\be
+\label{eq:analytic:critical_current}
+	I_\text{cr} = - \alpha_G \frac{\gamma M_0 \bra{ K + J_\text{int}}}{\sigma}.
+\ee
+As we can see, in our notation this value is negative.
+
+It is important to mention that the anisotropy and antiferromagnetic constants determine the scale of energy in the system. According to the expression for critical current, the damping effects is proportional to sum of these two, so it proportional to the amount of energy in the system. It is also important to mention that critical current is inversely proportional to the $\sigma$. This parameter is influenced by the range of polarization of the current, the ability of the system to perceive the spin current, and it independent from the $K$ and $J_\text{int}$.
+
+
+
 
 
 
