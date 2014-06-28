@@ -3,4 +3,5 @@
 *.log
 *.gz
 *.pdf
+*orig
 raw_figures/*

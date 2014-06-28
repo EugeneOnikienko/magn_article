@@ -1,27 +1,8 @@
 \documentclass[a4paper, 12pt, oneside]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[english, russian, ukrainian]{babel}
-\usepackage[height=25cm,a4paper,hmargin={3cm,2cm}]{geometry}
-\usepackage{amsmath, amssymb}
-\usepackage{graphicx, xcolor}
-\usepackage{indentfirst}
-\usepackage{caption}
-\usepackage{bm}
 
-% інтервал між строками
-\usepackage{setspace}
-\onehalfspacing
-
-% Регулювання кількості переносів
-\pretolerance = 9000
-
-\makeatletter
-\renewcommand{\@biblabel}[1]{#1.\hfil}
-\makeatother
-
-\graphicspath{{figures/}}
-
+\include{settings/includes}
 \include{settings/defs}
+
 \begin{document}
 
 \include{sections/intro}
