@@ -1,0 +1,46 @@
+\newpage
+
+\section{Lagrange description}
+
+The magnitude of the magnetization vector stays constant during the motion. As we have shown, in the case of small deviations form the equilibrium state, using of Cartesian coordinate system is straightforward. However it is inconvenient in the case of arbitrary deviations. The symmetry of the system prompts us to consider of the motion of magnetization vector in the spherical coordinate system with fixed length. In this case, however, it is much simpler to obtain the equations of motions from the Lagrangian principle.
+
+In the case that we considered, the Lagrangian function of the system can be written as following:
+\bea
+\label{eq:Lagrangian}
+	\mathcal{L} &=&	\frac{M_0}{\gamma} \sum_{k=1}^2
+					\left[
+						\bra{1 - \cos{\theta_k}}\dot{\phi}_k
+						+ \frac{\omega_{FM}}{2} \cos^2{\theta_k} \nn
+					\right]\\
+				&-& \frac{M_0}{\gamma} \Delta \omega_\text{int}
+					\left(
+						\cos{\theta_1} \cos{\theta_2}
+						+ \sin{\theta_1}\sin{\theta_2} \cos{\bra{\phi_2 - \phi_2}}
+					\right)
+\eea
+
+Here we present two new constants: $\omega_{FM}$ and $\Delta \omega_\text{int}$. Their meaning is straightforward: $\omega_{FM}$ is a ferromagnetic frequency in the absence of external fields and currents; $\Delta \omega_\text{int}$ is an additional term to the frequency which determined by the strength of the interlayer interaction. Matching between these constants and those which were presented in (\ref{eq:LLGS}) and (\ref{eq:free_enegy}) will be given further.
+
+As we deal with non-conservative system, the dissipative function has to be presented:
+\bea
+\label{eq:dissipative_function}
+	\mathcal{R} = \frac{M_0}{\gamma} \sum_{k=1}^2
+		\left[
+			\frac{1}{2} \alpha_{G}
+			\left(
+				\dot{\theta}_k^2 + \dot{\phi}_k^2 \sin^2 \theta
+			\right) 
+			- \epsilon \sigma I (-1)^k \sin^2\theta_k \dot{\phi}_k
+		\right]
+\eea
+
+The equations of motion are obtained according to the common approach of Lagrangian formalism:
+\be
+\label{eq:Lagrange_equation}
+	\frac{d}{dt}\pderiv{\mathcal{L}}{\dot{q}_j} - \pderiv{\mathcal{L}}{q_j} =
+	-\pderiv{ \mathcal{R}}{\dot{q}_j}
+\ee
+
+
+
+
