@@ -7,31 +7,32 @@ The magnitude of the magnetization vector stays constant during the motion. As w
 In the case that we considered, the Lagrangian function of the system can be written as following:
 \bea
 \label{eq:Lagrangian}
-	\mathcal{L} &=&	\frac{M_0}{\gamma} \sum_{k=1}^2
-					\left[
-						\bra{1 - \cos{\theta_k}}\dot{\phi}_k
-						+ \frac{\omega_{FM}}{2} \cos^2{\theta_k} \nn
-					\right]\\
-				&-& \frac{M_0}{\gamma} \Delta \omega_\text{int}
-					\left(
-						\cos{\theta_1} \cos{\theta_2}
-						+ \sin{\theta_1}\sin{\theta_2} \cos{\bra{\phi_2 - \phi_2}}
-					\right)
+\mathcal{L} &=&	\frac{M_0}{\gamma} \sum_{k=0}^1
+	\left[
+		\bra{1 - \cos{\theta_k}}\dot{\phi}_k
+		+ \frac{\omega_{FM}}{2} \cos^2{\theta_k} 
+	\right] \nn \\
+	&-& \frac{M_0}{\gamma} \Delta \omega_\text{int}
+	\left(
+		\cos{\theta_0} \cos{\theta_1}
+		+ \sin{\theta_0}\sin{\theta_1} \cos{\bra{\phi_0 - \phi_1}}
+	\right).
 \eea
+The $k$ index varies between 0 and 1, specifying the appropriate layer.
 
 Here we present two new constants: $\omega_{FM}$ and $\Delta \omega_\text{int}$. Their meaning is straightforward: $\omega_{FM}$ is a ferromagnetic frequency in the absence of external fields and currents; $\Delta \omega_\text{int}$ is an additional term to the frequency which determined by the strength of the interlayer interaction. Matching between these constants and those which were presented in (\ref{eq:LLGS}) and (\ref{eq:free_enegy}) will be given further.
 
 As we deal with non-conservative system, the dissipative function has to be presented:
 \bea
 \label{eq:dissipative_function}
-	\mathcal{R} = \frac{M_0}{\gamma} \sum_{k=1}^2
-		\left[
-			\frac{1}{2} \alpha_{G}
-			\left(
-				\dot{\theta}_k^2 + \dot{\phi}_k^2 \sin^2 \theta
-			\right) 
-			- \epsilon \sigma I (-1)^k \sin^2\theta_k \dot{\phi}_k
-		\right]
+\mathcal{R} = \frac{M_0}{\gamma} \sum_{k=0}^1
+	\left[
+		\frac{1}{2} \alpha_{G}
+		\left(
+			\dot{\theta}_k^2 + \dot{\phi}_k^2 \sin^2 \theta
+		\right) 
+		- \epsilon \sigma I (-1)^k \sin^2\theta_k \dot{\phi}_k
+	\right]
 \eea
 
 The equations of motion are obtained according to the common approach of Lagrangian formalism:
@@ -41,6 +42,24 @@ The equations of motion are obtained according to the common approach of Lagrang
 	-\pderiv{ \mathcal{R}}{\dot{q}_j}
 \ee
 
+By substitution of (\ref{eq:Lagrangian}) and (\ref{eq:dissipative_function}) into (\ref{eq:Lagrange_equation}) the explicit equations of motion is obtained:
+\bea
+\label{eq:equation_of_motion}
+\dot{\phi}_k &=&
+	\omega_\text{FM} \cos \theta_k
+	-\Delta\omega_\text{int}\cos \theta_{k+1}
+	+\Delta\omega_\text{int}
+		\frac{\cos\theta_k \sin\theta_{k+1}}{\sin\theta_k}\cos\Delta\phi
+	+ \alpha_\text{G} \dot{\theta}_k \nn \\
+\dot{\theta}_k &=&
+	(-1)^k
+	\left(
+		\epsilon\sigma I sin\theta_k
+		- \Delta\omega_\text{int}\sin\theta_{k+1}\sin\Delta\phi
+	\right)
+	- \alpha_\text{G} \dot{\phi}_k \sin\theta_k.
+\eea
+Here $\Delta\phi$ denotes $\phi_0 - \phi_1$.
 
 
 
